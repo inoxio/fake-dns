@@ -1,6 +1,6 @@
 package de.inoxio.fakedns.protocol;
 
-import de.inoxio.fakedns.DnsService;
+import de.inoxio.fakedns.dns.DnsService;
 import de.inoxio.fakedns.protocol.tcp.DnsTcpCodecFactory;
 import de.inoxio.fakedns.protocol.udp.DnsUdpCodecFactory;
 import lombok.RequiredArgsConstructor;
