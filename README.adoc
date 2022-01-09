@@ -1,0 +1,25 @@
+= Fake DNS
+
+This project provides a domain name service that can be used for testing. It is explicitly not the goal that Fake-DNS is used productively.
+It serves to support the development of other (dns related) programs.
+
+Should a DNS query return a specific answer or should the query be answered with an error code? Then Fake-DNS is the solution for you.
+
+== How-To
+
+Build and run the software. Make sure you have a JDK 17 installed.
+
+----
+./gradlew build
+----
+
+Result is in `build/libs/fake-dns-<version>.jar`
+
+----
+java -jar fake-dns-<version>.jar
+----
+
+== Configuration
+
+Check `src/main/resources/config/application.yml`
+The section `app.zones` is the one you are interesed in.
