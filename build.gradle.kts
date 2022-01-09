@@ -22,6 +22,9 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
+    implementation("org.springframework.boot:spring-boot-starter-validation")
+    implementation("org.apache.mina:mina-core:2.1.5")
+    implementation("dnsjava:dnsjava:3.4.3")
 
     compileOnly("org.projectlombok:lombok")
 

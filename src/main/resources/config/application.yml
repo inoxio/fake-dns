@@ -1,0 +1,7 @@
+spring:
+  main:
+    web-application-type: none
+
+app:
+  port: 53
+  thread-pool-size: 100
