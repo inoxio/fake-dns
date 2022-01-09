@@ -1,11 +1,13 @@
 package de.inoxio.fakedns;
 
+import java.util.List;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.validation.annotation.Validated;
+import org.xbill.DNS.Name;
 
 @Getter
 @Setter
@@ -20,4 +22,24 @@ public class ApplicationProperties {
     @Min(1)
     @Max(1000)
     private int threadPoolSize;
+
+    private List<Zones> zones;
+
+    @Getter
+    @Setter
+    public static class Zones {
+        private Name origin;
+        private List<Records> records;
+        private String errcode;
+        private int ttl;
+    }
+
+    @Getter
+    @Setter
+    public static class Records {
+        private String name;
+        private String type;
+        private String value;
+        private int priority;
+    }
 }

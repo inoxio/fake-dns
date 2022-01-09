@@ -5,3 +5,40 @@ spring:
 app:
   port: 53
   thread-pool-size: 100
+  zones:
+    - origin: domain.test.
+      ttl: 3600
+      records:
+        - name: '@'
+          type: A
+          value: 10.99.99.100
+        - name: '@'
+          type: NS
+          value: ns1
+        - name: '@'
+          type: NS
+          value: ns2
+        - name: '@'
+          type: MX
+          value: mail
+          priority: 10
+        - name: 'ns1'
+          type: A
+          value: 10.99.99.1
+        - name: 'ns2'
+          type: A
+          value: 10.99.99.2
+        - name: 'mail'
+          type: A
+          value: 10.99.99.99
+        - name: 'web'
+          type: A
+          value: 10.99.99.100
+        - name: 'www'
+          type: CNAME
+          value: web
+        - name: 'smtp'
+          type: CNAME
+          value: mail.domain.test.
+    - origin: unavailable.test.
+      errcode: SERVFAIL
