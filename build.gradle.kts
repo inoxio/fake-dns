@@ -24,7 +24,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.springframework.boot:spring-boot-starter-validation")
     implementation("org.apache.mina:mina-core:2.1.6")
-    implementation("dnsjava:dnsjava:3.5.0")
+    implementation("dnsjava:dnsjava:3.5.1")
 
     compileOnly("org.projectlombok:lombok")
 
