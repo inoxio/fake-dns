@@ -1,7 +1,7 @@
 plugins {
     id("com.adarshr.test-logger") version "3.2.0"
     id("com.github.ben-manes.versions") version "0.47.0"
-    id("io.spring.dependency-management") version "1.1.0"
+    id("io.spring.dependency-management") version "1.1.1"
     id("jacoco")
     id("java")
     id("org.springframework.boot") version "2.7.13"
