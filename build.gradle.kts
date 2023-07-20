@@ -4,7 +4,7 @@ plugins {
     id("io.spring.dependency-management") version "1.1.2"
     id("jacoco")
     id("java")
-    id("org.springframework.boot") version "2.7.13"
+    id("org.springframework.boot") version "2.7.14"
 }
 
 group = "de.inoxio"
