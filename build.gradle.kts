@@ -77,6 +77,6 @@ tasks {
     }
     wrapper {
         distributionType = Wrapper.DistributionType.ALL
-        gradleVersion = "8.11.1"
+        gradleVersion = "8.12"
     }
 }
