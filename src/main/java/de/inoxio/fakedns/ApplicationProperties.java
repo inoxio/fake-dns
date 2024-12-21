@@ -1,13 +1,13 @@
 package de.inoxio.fakedns;
 
 import java.util.List;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.validation.annotation.Validated;
 import org.xbill.DNS.Name;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 
 @Getter
 @Setter
