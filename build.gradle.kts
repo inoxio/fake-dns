@@ -1,6 +1,5 @@
 plugins {
     id("com.adarshr.test-logger") version "4.0.0"
-    id("com.github.ben-manes.versions") version "0.51.0"
     id("io.spring.dependency-management") version "1.1.7"
     id("jacoco")
     id("java")
@@ -38,8 +37,7 @@ dependencies {
 
 tasks {
     java {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_21
     }
     compileJava {
         options.apply {
@@ -57,13 +55,6 @@ tasks {
         reports { xml.apply { required.set(true) } }
         dependsOn("test")
     }
-    dependencyUpdates {
-        rejectVersionIf {
-            listOf("alpha", "beta", "rc", "cr", "m", "preview", "b", "ea", "pr").any { qualifier ->
-                "(?i).*[.-]$qualifier[.\\d-+]*".toRegex().matches(candidate.version)
-            }
-        }
-    }
     springBoot {
         bootBuildImage {
             imageName = "ghcr.io/inoxio/fake-dns:${project.version}"
@@ -74,9 +65,5 @@ tasks {
                 }
             }
         }
-    }
-    wrapper {
-        distributionType = Wrapper.DistributionType.ALL
-        gradleVersion = "8.12"
     }
 }
